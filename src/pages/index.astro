@@ -1,46 +1,32 @@
 ---
+import Hero from "../assets/Hero.webp";
+import BigCard from "../components/BigCard.astro";
+import FeatureSection from "../components/FeatureSection.astro";
+import Heading from "../components/Heading.astro";
+import Layout from "../layouts/Layout.astro";
+import "../Styles/general.css";
+import "../Styles/index.css";
+import BannerSection from "../components/BannerSection.astro";
+import Podcastserie from "../components/Podcastserie.astro";
+import MereOmUge44 from "../components/MereOmUge44.astro";
 
 ---
+	<Layout>		
+	  
+		<Heading text="Hvad er uge 44?"/>
+        <FeatureSection />
+		<BannerSection />
+        <BigCard
+  placeholder={Hero}
+  buttonText="OM"
+  order={1}
+  title="Uge 44"
+  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit auctor dui, sed efficitur enim efficitur a. Sed at nunc eget nisl convallis commodo. Donec in ligula a enim efficitur varius. Donec ut felis id metus efficitur fermentum."
+/>
+		
+<Podcastserie />
+<MereOmUge44 />
 
-<!doctype html>
-<html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/nav.js" defer></script>
-    <link rel="stylesheet" href="css/general.css" />
-    <title>Uge44</title>
-    <link rel="icon" type="image/png" href="img/favicon_resultat.webp" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.astro"> <img src="imgs/Logo.png" alt="" /></a>
-      </div>
-      <nav class="menu">
-        <a href="index.astro">Forside</a>
-        <a href="kalender.astro">Kalender</a>
-        <a href="om.astro">Om os</a>
-        <a href="presse.astro">Presse</a>
-        <a href="kontakt.astro">Kontakt</a>
-      </nav>
 
-      <div class="mobile-nav">
-        <a href="index.astro">Forside</a>
-        <a href="kalender.astro">Kalender</a>
-        <a href="om.astro">Om os</a>
-        <a href="presse.astro">Presse</a>
-        <a href="kontakt.astro">Kontakt</a>
-      </div>
-
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div></header>
-
-	<body>
-		<h1>Astro</h1>
-		<p>hej hej med dig</p>
-	</body>
-</html>
+		
+	</Layout>
