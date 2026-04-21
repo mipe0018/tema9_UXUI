@@ -1,4 +1,6 @@
 ---
+
+import Banner from "../assets/UGE-44-banner-OmOs.webp";
 import Layout from "../layouts/Layout.astro";
 import Heading from "../components/Heading.astro";
 import BigCard from "../components/BigCard.astro";
@@ -6,7 +8,9 @@ import "../Styles/general.css";
 ---
 
 <Layout>
-
+<section class="about-hero">
+  <img src={Banner.src} alt="UGE 44 banner" />
+</section>
   <Heading text="Om os" />
 
   <BigCard

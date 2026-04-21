@@ -1,4 +1,5 @@
 
+
 /* =========================
    FONTS
 ========================= */
@@ -454,4 +455,152 @@ footer {
   aspect-ratio: 4 / 5;
   width: 100%;
   object-fit: cover;
+}
+
+/* =========================
+   NAVIGATION (FIXET)
+========================= */
+
+/* Desktop menu */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile menu skjult som default */
+.mobile-nav {
+  display: none;
+}
+
+/* Burger skjult på desktop */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+/* 🔥 MOBIL */
+@media (max-width: 800px) {
+
+  /* skjul desktop menu */
+  .nav-links {
+    display: none;
+  }
+
+  /* vis burger */
+  .burger {
+    display: flex;            /* 🔥 ændret fra none */
+    flex-direction: column;   /* 🔥 gør det til 3 streger */
+    gap: 5px;
+  }
+
+  /* mobile menu */
+  .mobile-nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: white;
+
+    display: none;            /* 🔥 vigtig */
+    flex-direction: column;
+    align-items: center;
+
+    transform: translateY(-100%);
+    transition: 0.3s;
+  }
+
+  .mobile-nav.open {
+  display: flex !important; /* 🔥 sikrer den altid vises */
+  transform: translateY(0);
+}
+}
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  display: block;
+}
+
+.nav {
+  position: relative;
+  z-index: 1000;
+}
+
+.mobile-nav {
+  z-index: 1001; /* 🔥 højere end hero */
+}
+/* =========================
+   NAV LAYOUT FIX (VIGTIG)
+========================= */
+
+.nav {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+  background: #f3f3f3;
+}
+
+/* venstre side (logo + tekst) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* logo størrelse */
+.logo {
+  width: 120px;
+}
+
+/* titel */
+.nav-title {
+  font-weight: bold;
+}
+.nav-links a,
+.mobile-nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/* =========================
+   HERO RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  .hero {
+    height: auto;
+    aspect-ratio: 3 / 4; /* 🔥 god proportion */
+  }
+
+  .hero-tagline {
+    font-size: 18px;
+    bottom: 80px;
+  }
+}
+
+/* =========================
+   HERO RESPONSIVE TOM (FIXED)
+========================= */
+
+
+
+
+
+
+/* =========================
+   HERO-banner STYLING ABOUT PAGE
+========================= */
+.about-hero {
+  grid-column: 1 / -1;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
