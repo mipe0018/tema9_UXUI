@@ -19,7 +19,9 @@ pnpm-debug.log*
 .env.production
 
 # macOS-specific files
+._*
 .DS_Store
+
 
 # jetbrains setting folder
 .idea/
